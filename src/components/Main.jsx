@@ -1,3 +1,5 @@
+import { IconsGallery } from "./IconsGallery"
+import { motion } from "framer-motion"
 function Main() {
   const proyects = [
     {
@@ -16,48 +18,63 @@ function Main() {
       url: "https://yordanfortune.netlify.app/"
     },
     {
-      name: "CrudUsuarios",
+      name: "CrudUsers",
       description: "Design & Development",
       url: "https://crudyordan.netlify.app/"
     }
   ]
+
+  const renderProjects = proyects.map((project) => {
+    return (
+      <li key={project.name} className="project-item">
+        <div className="main__container--projects--card">
+          <div className={"main__container--projects--card--img "}></div>
+          <h4>{project.name}</h4>
+          <span>{project.description}</span>
+          <a
+            href={project.url}
+            target="_blank"
+            className={`project-link ${project.name}`}
+            rel="noreferrer"
+          ></a>
+        </div>
+      </li>
+    )
+  })
+
   return (
     <main className="main">
-      <section className="main__container">
+      <section className="main__container" id="about">
         <div className="main__container--title">
-          <h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ duration: 0.5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
             Hi! I'm Yordani. I'm passionate about development. In this digital
             space I'm sharing my work and projects. It's a reflection of my
             creativity, dedication and professional growth.
-          </h2>
+          </motion.h2>
         </div>
         <div className="main__container--description">
-          <p>¡Welcome to my digital space of work and projects!</p>
+          <motion.h3
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            Welcome to my digital space!
+          </motion.h3>
         </div>
       </section>
+      <section className="main__container--skills">
+        <h3 className="main__container--skills--title">Skills</h3>
+        <IconsGallery />
+      </section>
       <section className="main__container--projects">
-        <p className="main__container--projects--title">Recent Projects</p>
-        <ul>
-          {proyects.map((proyect) => {
-            return (
-              <li key={proyect.name} className="project-item">
-                <div className="main__container--projects--card">
-                  <div
-                    className={"main__container--projects--card--img "}
-                  ></div>
-                  <h4>{proyect.name}</h4>
-                  <span>{proyect.description}</span>
-                  <a
-                    href={proyect.url}
-                    target="_blank"
-                    className={`project-link ${proyect.name}`}
-                    rel="noreferrer"
-                  ></a>
-                </div>
-              </li>
-            )
-          })}
-        </ul>
+        <h3 className="main__container--projects--title" id="work">
+          Recent Projects
+        </h3>
+        <ul>{renderProjects}</ul>
       </section>
     </main>
   )
