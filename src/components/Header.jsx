@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { applyHoverEffect } from "../hoverEffects"
 import { FloatingMenu } from "./FloatingMenu"
 import { useInView, motion } from "framer-motion"
@@ -11,12 +11,47 @@ function Header() {
 
   const navRef = useRef(null)
   const isInView = useInView(navRef)
+  const [openMenu, setOpenMenu] = useState(false)
+
+  const [hideNavBar, setHideNavBar] = useState(false)
 
   useEffect(() => {
-    applyHoverEffect(workRef.current)
-    applyHoverEffect(aboutRef.current)
-    applyHoverEffect(contactRef.current)
-    applyHoverEffect(logoRef.current)
+    if (innerWidth <= 650) {
+      hideNav()
+    } else {
+      showNav()
+    }
+  }, [])
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 650) {
+        hideNav()
+      } else {
+        showNav()
+      }
+    }
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
+
+  function hideNav() {
+    setHideNavBar(false)
+  }
+  function showNav() {
+    setHideNavBar(true)
+  }
+  console.log(hideNavBar)
+  useEffect(() => {
+    if (innerWidth > 500) {
+      applyHoverEffect(workRef.current)
+      applyHoverEffect(aboutRef.current)
+      applyHoverEffect(contactRef.current)
+      applyHoverEffect(logoRef.current)
+    }
   }, [])
 
   const styles = {
@@ -24,6 +59,42 @@ function Header() {
     animate: { x: 0, opacity: 1 },
     transition: { duration: 0.7 }
   }
+
+  const textNav = (
+    <ul>
+      <motion.li
+        variants={styles}
+        initial={"initial"}
+        transition={("transition", { delay: 0 })}
+        animate={"animate"}
+      >
+        <a href="#about" className="active" ref={aboutRef}>
+          About
+        </a>
+      </motion.li>
+      <motion.li
+        variants={styles}
+        initial={"initial"}
+        transition={("transition", { delay: 0.2 })}
+        animate={"animate"}
+      >
+        <a href="#work" className="active" ref={workRef}>
+          Work
+        </a>
+      </motion.li>
+      <motion.li
+        variants={styles}
+        initial={"initial"}
+        transition={("transition", { delay: 0.4 })}
+        animate={"animate"}
+      >
+        <a href="#contact" className="active" ref={contactRef}>
+          Contact
+        </a>
+      </motion.li>
+    </ul>
+  )
+  const textNavMobile = <li onClick={() => setOpenMenu(!openMenu)}>Menu</li>
 
   return (
     <header className="header" id="home">
@@ -41,41 +112,14 @@ function Header() {
           </motion.p>
         </div>
         <div className="header nav-bar__links" ref={navRef}>
-          <ul>
-            <motion.li
-              variants={styles}
-              initial={"initial"}
-              transition={("transition", { delay: 0 })}
-              animate={"animate"}
-            >
-              <a href="#about" className="active" ref={aboutRef}>
-                About
-              </a>
-            </motion.li>
-            <motion.li
-              variants={styles}
-              initial={"initial"}
-              transition={("transition", { delay: 0.2 })}
-              animate={"animate"}
-            >
-              <a href="#work" className="active" ref={workRef}>
-                Work
-              </a>
-            </motion.li>
-            <motion.li
-              variants={styles}
-              initial={"initial"}
-              transition={("transition", { delay: 0.4 })}
-              animate={"animate"}
-            >
-              <a href="#contact" className="active" ref={contactRef}>
-                Contact
-              </a>
-            </motion.li>
-          </ul>
+          <ul>{hideNavBar && !openMenu ? textNav : textNavMobile}</ul>
         </div>
       </nav>
-      <FloatingMenu isInView={isInView} />
+      <FloatingMenu
+        isInView={isInView}
+        openMenu={openMenu}
+        setOpenMenu={setOpenMenu}
+      />
       <motion.div
         className="header__location"
         variants={styles}
@@ -86,14 +130,16 @@ function Header() {
         <p>Located in the heart of the city of Buenos Aires, Argentina</p>
         <img src="./worldwide.png" alt="worldwide" />
       </motion.div>
-      <motion.img
-        initial={{ opacity: 0, y: 100 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="header__img"
-        src="/yordan2.png"
-        alt="yordani"
-      />
+      <div className="header__img-container">
+        <motion.img
+          initial={{ opacity: 0, y: 100 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="header__img"
+          src="/yordan2.png"
+          alt="yordani"
+        />
+      </div>
       <motion.div
         initial={{ opacity: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}

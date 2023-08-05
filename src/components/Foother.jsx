@@ -15,11 +15,13 @@ function Foother() {
   }, [])
 
   useEffect(() => {
-    applyHoverEffect(emailRef.current)
-    applyHoverEffect(phoneRef.current)
-    applyHoverEffect(social1Ref.current)
-    applyHoverEffect(social2Ref.current)
-    applyHoverEffect(social3Ref.current)
+    if (innerWidth > 500) {
+      applyHoverEffect(emailRef.current)
+      applyHoverEffect(phoneRef.current)
+      applyHoverEffect(social1Ref.current)
+      applyHoverEffect(social2Ref.current)
+      applyHoverEffect(social3Ref.current)
+    }
   }, [])
 
   const handleEmailClick = () => {
@@ -37,7 +39,10 @@ function Foother() {
       <div className="footer__container">
         <div className="footer__logo">
           <h4 className="footer__logo--title">
-            <div className="footer__logo--img--container"><div className="footer__logo--img"></div>Let’s work</div> <span>together</span>
+            <div className="footer__logo--img--container">
+              <div className="footer__logo--img"></div>Let’s work
+            </div>{" "}
+            <span>together</span>
           </h4>
         </div>
         <hr className="footer__line" />

@@ -28,7 +28,6 @@ function Main() {
     return (
       <li key={project.name} className="project-item">
         <div className="main__container--projects--card">
-          <div className={"main__container--projects--card--img "}></div>
           <h4>{project.name}</h4>
           <span>{project.description}</span>
           <a

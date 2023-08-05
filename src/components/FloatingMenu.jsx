@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react"
 import { applyHoverEffect } from "../hoverEffects"
 import { motion, AnimatePresence } from "framer-motion"
-export const FloatingMenu = ({ isInView }) => {
+export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
   const menuRef = useRef(null)
   const workRef = useRef(null)
   const aboutRef = useRef(null)
@@ -13,14 +13,16 @@ export const FloatingMenu = ({ isInView }) => {
   const [showMenu, setShowMenu] = useState(false)
 
   useEffect(() => {
-    applyHoverEffect(menuRef.current)
-    applyHoverEffect(workRef.current)
-    applyHoverEffect(aboutRef.current)
-    applyHoverEffect(contactRef.current)
-    applyHoverEffect(homeRef.current)
-    applyHoverEffect(social1Ref.current)
-    applyHoverEffect(social2Ref.current)
-    applyHoverEffect(social3Ref.current)
+    if (innerWidth > 500) {
+      applyHoverEffect(menuRef.current)
+      applyHoverEffect(workRef.current)
+      applyHoverEffect(aboutRef.current)
+      applyHoverEffect(contactRef.current)
+      applyHoverEffect(homeRef.current)
+      applyHoverEffect(social1Ref.current)
+      applyHoverEffect(social2Ref.current)
+      applyHoverEffect(social3Ref.current)
+    }
   }, [showMenu])
 
   const menuVariants = {
@@ -42,11 +44,14 @@ export const FloatingMenu = ({ isInView }) => {
       }
     }
   }
-  console.log(isInView)
+
+  useEffect(() => {
+    setShowMenu(openMenu)
+  }, [openMenu])
 
   return (
     <>
-      {!isInView && (
+      {(!isInView || openMenu) && (
         <>
           <AnimatePresence>
             <motion.div
@@ -56,7 +61,7 @@ export const FloatingMenu = ({ isInView }) => {
               exit={{ x: -300, opacity: 0 }}
             >
               <div
-                onClick={() => setShowMenu(!showMenu)}
+                onClick={() => setOpenMenu(!openMenu)}
                 className="floating__menu-Main"
                 ref={menuRef}
               >
@@ -87,14 +92,26 @@ export const FloatingMenu = ({ isInView }) => {
                   <ul className="floating-menu-content-list">
                     <li>
                       <p className="pointer" ref={homeRef}>
-                        <a onClick={() => setShowMenu(!showMenu)} href="#home">
+                        <a
+                          onClick={() => {
+                            setShowMenu(!showMenu)
+                            setOpenMenu(!showMenu)
+                          }}
+                          href="#home"
+                        >
                           Home
                         </a>
                       </p>
                     </li>
                     <li>
                       <p className="pointer" ref={aboutRef}>
-                        <a onClick={() => setShowMenu(!showMenu)} href="#about">
+                        <a
+                          onClick={() => {
+                            setShowMenu(!showMenu)
+                            setOpenMenu(!showMenu)
+                          }}
+                          href="#about"
+                        >
                           About
                         </a>
                       </p>
@@ -102,7 +119,10 @@ export const FloatingMenu = ({ isInView }) => {
                     <li>
                       <p className="pointer" ref={workRef}>
                         <a
-                          onClick={() => setShowMenu(!showMenu)}
+                          onClick={() => {
+                            setShowMenu(!showMenu)
+                            setOpenMenu(!showMenu)
+                          }}
                           href="#work"
                           ref={workRef}
                         >
@@ -113,7 +133,10 @@ export const FloatingMenu = ({ isInView }) => {
                     <li>
                       <p className="pointer" ref={contactRef}>
                         <a
-                          onClick={() => setShowMenu(!showMenu)}
+                          onClick={() => {
+                            setShowMenu(!showMenu)
+                            setOpenMenu(!showMenu)
+                          }}
                           href="#contact"
                         >
                           Contact
