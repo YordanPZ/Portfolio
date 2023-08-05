@@ -14,6 +14,16 @@ function Header() {
   const [openMenu, setOpenMenu] = useState(false)
 
   const [hideNavBar, setHideNavBar] = useState(false)
+  useEffect(() => {
+    if (innerWidth > 500) {
+      setTimeout(() => {
+        applyHoverEffect(workRef.current)
+        applyHoverEffect(aboutRef.current)
+        applyHoverEffect(contactRef.current)
+        applyHoverEffect(logoRef.current)
+      }, 1000)
+    }
+  }, [])
 
   useEffect(() => {
     if (innerWidth <= 650) {
@@ -44,15 +54,6 @@ function Header() {
   function showNav() {
     setHideNavBar(true)
   }
-  console.log(hideNavBar)
-  useEffect(() => {
-    if (innerWidth > 500) {
-      applyHoverEffect(workRef.current)
-      applyHoverEffect(aboutRef.current)
-      applyHoverEffect(contactRef.current)
-      applyHoverEffect(logoRef.current)
-    }
-  }, [])
 
   const styles = {
     initial: { x: 100, opacity: 0 },
