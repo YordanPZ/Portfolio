@@ -493,7 +493,7 @@ a{
   height: 100%;
   top: 0;
   right: 0;
-  width: 40vw;
+  width: 60vw;
   font-family: 'Comfortaa', cursive;
   z-index: 50;
   border:1px solid #545557;
@@ -609,7 +609,7 @@ a{
     margin: 0 30%;
   }
   .header{
-    max-height: 80vh;
+    max-height: 90vh;
   }
   .header__name{
     bottom: 30%;
@@ -674,6 +674,7 @@ a{
   }
 }
 @media (width <= 800px){
+  
   .project-link::before {
     height: 15rem;
     clip-path: circle(60% at 100% 50%);
@@ -688,12 +689,9 @@ a{
   .header .nav-bar__logo p{
     font-size: 1rem
   }
+
   .header__profesion{
     font-size: 2rem;
-  }
-  .header__profesion >div i{
-    top: -6rem;
-    right: 10rem;
   }
   .header__location{
     padding: 1rem;
@@ -728,13 +726,16 @@ a{
   }
   .floating-menu-content{
     padding: 10px 30px;
-    width: 40vw;
+    width: 70vw;
   }
   .floating-menu-content-list-footer{
     gap: 20px;
   }
 }
 @media (width <= 700px){
+  .floating-menu-content{
+    width: 100%;
+  }
   .header__location{
   display: none;
   }
