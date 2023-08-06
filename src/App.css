@@ -304,7 +304,8 @@ a{
   display: inline;
 }
 .footer{
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 900px;
   background-color: var(--color-dark);
   color: var(--color-white);
   padding: 5rem 5rem 0 5rem;
@@ -468,6 +469,7 @@ a{
   clip-path: circle(0px at 50% 0);
   width: 100%;
   background-color: var(--color-blue);
+  opacity: 0; /* Agregar opacity: 0 */
   overflow: hidden;
   transition: 0.6s ease all;
   z-index: -1;
@@ -594,12 +596,34 @@ a{
   }
 }
 @media (width <= 1000px){
-  .header__profesion{
-    font-size: 2.5rem;
+  .header__img{
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    margin: auto auto 0 auto;
   }
-  .header__profesion >div i{
-    top: -7rem;
-    right: 15rem;
+  .header__location{
+    display: none;
+    }
+  .hr{
+    margin: 0 30%;
+  }
+  .header{
+    max-height: 80vh;
+  }
+  .header__name{
+    bottom: 30%;
+    font-size: 3rem;
+  }
+  .header__profesion{
+    font-size: 2rem;
+    left: 5rem;
+    top: 70%;
+  }
+  .header__profesion> div >i {
+    top: -1rem;
+    left: -9rem;
+    transform: rotate(210deg);
   }
   .skill{
     width: 80px;
@@ -714,9 +738,6 @@ a{
   .header__location{
   display: none;
   }
-  .footer__contact{
-    padding-left: 0rem;
-  }
   .footer{
     padding-right: 1rem;
   }
@@ -730,9 +751,8 @@ a{
     left: 1rem;
     transform: rotate(210deg);
   }
-  .header__img{
-    bottom: 0;
-    left: 1rem;
+  .footer__contact{
+    padding-left: 0rem;
   }
   .skill{
     width: 40px;
@@ -775,7 +795,7 @@ a{
     max-height: 100%;
     position: absolute;
     inset: 0;
-    margin: auto 10px 0 auto;
+    margin: auto auto 0 auto;
   }
   .main__container{
     padding: 30px 0;
@@ -803,6 +823,10 @@ a{
   .footer__container--info--socials--links{
     gap: 10px;
   }
+  .footer__contact--email{
+    width: 18rem;
+    font-size: 1.2rem;
+  }
   .footer__contact--phone{
     width: 16rem;
   }
@@ -823,17 +847,17 @@ a{
     height: 100%;
     position: absolute;
     inset: 0;
-    margin: auto 80px 0 auto;
+    margin: auto auto 0 auto;
   }
   .header{
-    max-height: 60vh;
+    max-height: 50vh;
   }
   .header__name{
     bottom: 30%;
     font-size: 3rem;
   }
   .header__profesion{
-    font-size: 2rem;
+    font-size: 1.4rem;
     left: 5rem;
     top: 70%;
   }
