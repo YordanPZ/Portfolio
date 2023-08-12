@@ -3,14 +3,9 @@ import { motion } from "framer-motion"
 function Main() {
   const proyects = [
     {
-      name: "Weather",
+      name: "Ecommerce",
       description: "Design & Development",
-      url: "https://yordanluli.netlify.app/"
-    },
-    {
-      name: "RickAndMorty",
-      description: "Design & Development",
-      url: "https://rickaandmortyy.netlify.app/"
+      url: "https://ecomerceahy.netlify.app/"
     },
     {
       name: "Pokedex",
@@ -21,6 +16,16 @@ function Main() {
       name: "CrudUsers",
       description: "Design & Development",
       url: "https://crudyordan.netlify.app/"
+    },
+    {
+      name: "RickAndMorty",
+      description: "Design & Development",
+      url: "https://rickaandmortyy.netlify.app/"
+    },
+    {
+      name: "Weather",
+      description: "Design & Development",
+      url: "https://yordanluli.netlify.app/"
     }
   ]
 
