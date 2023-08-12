@@ -277,16 +277,16 @@ a{
   transition: 1s ease all;
 }
 .Weather::before{
-  background-image: url(/clouds.jpg)
+  background-image: url(/weather.png)
 }
 .RickAndMorty::before{
-  background-image: url(/RickandMorty.jpg)
-}
-.FortuneCookie::before{
-  background-image: url(/Cookie.jpg)
+  background-image: url(/rick.png)
 }
 .CrudUsers::before{
-  background-image: url(/crud.svg)
+  background-image: url(/crud.png)
+}
+.Pokedex::before{
+  background-image: url(/Pokedex.png)
 }
 .project-link:hover::before {
   opacity: 0.2;

@@ -13,9 +13,9 @@ function Main() {
       url: "https://rickaandmortyy.netlify.app/"
     },
     {
-      name: "FortuneCookie",
+      name: "Pokedex",
       description: "Design & Development",
-      url: "https://yordanfortune.netlify.app/"
+      url: "https://pokedexhya.netlify.app/"
     },
     {
       name: "CrudUsers",
