@@ -1,6 +1,12 @@
 import { IconsGallery } from "./IconsGallery"
-import { motion } from "framer-motion"
+import { motion, useInView } from "framer-motion"
+import ContactBar from "./ContactBar"
+import { useRef } from "react"
+
 function Main() {
+  const whatsappRef = useRef(null)
+  const isInView = useInView(whatsappRef)
+  console.log(isInView)
   const proyects = [
     {
       name: "Ecommerce",
@@ -47,8 +53,9 @@ function Main() {
   })
 
   return (
-    <main className="main">
+    <main className="main" ref={whatsappRef}>
       <section className="main__container" id="about">
+        {isInView && <ContactBar />}
         <div className="main__container--title">
           <motion.h2
             initial={{ opacity: 0, y: 100 }}

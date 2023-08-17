@@ -545,6 +545,45 @@ a{
 .pointer{
   cursor: pointer;
 }
+.card {
+  display: flex;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  height: fit-content;
+  width: fit-content;
+  background-color: var(--color-dark);
+  border-radius: 49%;
+}
+
+.social-link4{
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.card:hover {
+  background-color: #12a50b;
+  animation: bounce_613 0.4s linear;
+  cursor: pointer;
+}
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 @media (width <= 1600px){
   .header__profesion{
     right: 8rem;
@@ -571,6 +610,9 @@ a{
   }
 }
 @media (width <= 1250px){
+  .card{
+    display: none;
+  }
   .header__img{
     height: 90%;
   }
