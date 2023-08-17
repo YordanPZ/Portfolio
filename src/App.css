@@ -750,7 +750,7 @@ a{
   .header__profesion{
     font-size: 2rem;
     left: 5rem;
-    top: 90%;
+    top: 86%;
   }
   .header__profesion> div >i {
     top: -5rem;
@@ -798,10 +798,10 @@ a{
     background-position: center -13px;
   }
   .header__img{
-    max-height: 100%;
+    max-height: 80%;
     position: absolute;
     inset: 0;
-    margin: auto auto 0 auto;
+    margin: auto auto auto auto;
   }
   .main__container{
     padding: 30px 0;
