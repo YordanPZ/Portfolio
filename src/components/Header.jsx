@@ -100,7 +100,7 @@ function Header() {
 
   return (
     <header className="header" id="home">
-      <BackgroundStars />
+      
       <nav className="header nav-bar">
         <div className="header nav-bar__logo">
           <motion.p
