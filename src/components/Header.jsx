@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { applyHoverEffect } from "../hoverEffects"
 import { FloatingMenu } from "./FloatingMenu"
 import { useInView, motion } from "framer-motion"
+import BackgroundStars from "../BackgroundStars"
 
 function Header() {
   const workRef = useRef(null)
@@ -99,6 +100,7 @@ function Header() {
 
   return (
     <header className="header" id="home">
+      <BackgroundStars />
       <nav className="header nav-bar">
         <div className="header nav-bar__logo">
           <motion.p
@@ -137,7 +139,7 @@ function Header() {
           transition={{ duration: 0.5, delay: 0.3 }}
           animate={{ opacity: 1, y: 0 }}
           className="header__img"
-          src="/yordan2.png"
+          src="/bulb.png"
           alt="yordani"
         />
       </div>
