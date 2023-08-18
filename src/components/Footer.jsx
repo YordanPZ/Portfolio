@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react"
 import { obtenerHoraBuenosAires } from "../TimeCalculator"
 import { applyHoverEffect } from "../hoverEffects"
 
-function Foother() {
+function Footer() {
   const [horaBuenosAires, setHoraBuenosAires] = useState("")
   const emailRef = useRef(null)
   const phoneRef = useRef(null)
@@ -77,8 +77,8 @@ function Foother() {
             >
               <p ref={social1Ref}>LinkedIn</p>
             </a>
-            <a href="https://www.instagram.com/yordanijimenes/" target="blank">
-              <p ref={social2Ref}>Instagram</p>
+            <a href="https://wa.link/r4ng1k" target="blank">
+              <p ref={social2Ref}>WhatsApp</p>
             </a>
             <a
               href="https://github.com/YordanPZ?tab=repositories"
@@ -93,4 +93,4 @@ function Foother() {
   )
 }
 
-export default Foother
+export default Footer

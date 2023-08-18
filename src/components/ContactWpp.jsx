@@ -1,6 +1,6 @@
 import React from "react"
 
-function ContactBar() {
+function ContactWpp() {
   return (
     <div className="card">
       <a
@@ -29,4 +29,4 @@ function ContactBar() {
   )
 }
 
-export default ContactBar
+export default ContactWpp

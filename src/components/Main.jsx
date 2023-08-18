@@ -1,46 +1,90 @@
 import { IconsGallery } from "./IconsGallery"
 import { motion, useInView } from "framer-motion"
-import ContactBar from "./ContactBar"
+import ContactWpp from "./ContactWpp"
 import { useRef } from "react"
 
 function Main() {
   const whatsappRef = useRef(null)
   const isInView = useInView(whatsappRef)
-  console.log(isInView)
   const proyects = [
     {
       name: "Ecommerce",
       description: "Design & Development",
-      url: "https://ecomerceahy.netlify.app/"
+      url: "https://ecomerceahy.netlify.app/",
+      technologies: [
+        "/react.svg",
+        "/redux.svg",
+        "/html5.svg",
+        "/css3.svg",
+        "/javascript.svg"
+      ]
     },
     {
       name: "Pokedex",
       description: "Design & Development",
-      url: "https://pokedexhya.netlify.app/"
+      url: "https://pokedexhya.netlify.app/",
+      technologies: [
+        "/react.svg",
+        "/redux.svg",
+        "/html5.svg",
+        "/css3.svg",
+        "/javascript.svg",
+        "/materialui.svg"
+      ]
     },
     {
       name: "CrudUsers",
       description: "Design & Development",
-      url: "https://crudyordan.netlify.app/"
+      url: "https://crudyordan.netlify.app/",
+      technologies: [
+        "/react.svg",
+        "/typescript.svg",
+        "/html5.svg",
+        "/css3.svg",
+        "/javascript.svg",
+        "/tailwindcss.svg"
+      ]
     },
     {
       name: "RickAndMorty",
       description: "Design & Development",
-      url: "https://rickaandmortyy.netlify.app/"
+      url: "https://rickaandmortyy.netlify.app/",
+      technologies: [
+        "/react.svg",
+        "/html5.svg",
+        "/css3.svg",
+        "/javascript.svg",
+        "/tailwindcss.svg"
+      ]
     },
     {
       name: "Weather",
       description: "Design & Development",
-      url: "https://yordanluli.netlify.app/"
+      url: "https://yordanluli.netlify.app/",
+      technologies: ["/react.svg", "/html5.svg", "/css3.svg", "/javascript.svg"]
     }
   ]
 
-  const renderProjects = proyects.map((project) => {
+  const renderProjects = proyects.map((project, index) => {
     return (
       <li key={project.name} className="project-item">
         <div className="main__container--projects--card">
-          <h4>{project.name}</h4>
-          <span>{project.description}</span>
+          <h4 className="project-name">{project.name}</h4>
+          <div>
+            <span>{project.description}</span>
+            <div className="project-technologies">
+              {project.technologies.map((technology, index) => {
+                return (
+                  <img
+                    key={technology}
+                    src={technology}
+                    className="technologies"
+                    alt={technology}
+                  />
+                )
+              })}
+            </div>
+          </div>
           <a
             href={project.url}
             target="_blank"
@@ -55,7 +99,7 @@ function Main() {
   return (
     <main className="main" ref={whatsappRef}>
       <section className="main__container" id="about">
-        {isInView && <ContactBar />}
+        {isInView && <ContactWpp />}
         <div className="main__container--title">
           <motion.h2
             initial={{ opacity: 0, y: 100 }}

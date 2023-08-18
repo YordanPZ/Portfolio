@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react"
 import { applyHoverEffect } from "../hoverEffects"
 import { motion, AnimatePresence } from "framer-motion"
+import DownloadCv from "./DownloadCv"
 export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
   const menuRef = useRef(null)
   const workRef = useRef(null)
@@ -143,6 +144,9 @@ export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
                         </a>
                       </p>
                     </li>
+                    <li>
+                      <DownloadCv />
+                    </li>
                   </ul>
                 </div>
                 <div className="floating-menu-content-inner">
@@ -171,11 +175,8 @@ export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
                     </li>
                     <li>
                       <p className="pointer" ref={social3Ref}>
-                        <a
-                          target="blank"
-                          href="https://www.instagram.com/yordanijimenes/"
-                        >
-                          Instagram
+                        <a target="blank" href="https://wa.link/r4ng1k">
+                          WhatsApp
                         </a>
                       </p>
                     </li>
