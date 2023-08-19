@@ -2,14 +2,16 @@ import { IconsGallery } from "./IconsGallery"
 import { motion, useInView } from "framer-motion"
 import ContactWpp from "./ContactWpp"
 import { useRef } from "react"
+import { useTranslation } from "react-i18next"
 
 function Main() {
   const whatsappRef = useRef(null)
+  const { t } = useTranslation()
   const isInView = useInView(whatsappRef)
   const proyects = [
     {
       name: "Ecommerce",
-      description: "Design & Development",
+      description: t("translation.projectDescription"),
       url: "https://ecomerceahy.netlify.app/",
       technologies: [
         "/react.svg",
@@ -21,7 +23,7 @@ function Main() {
     },
     {
       name: "Pokedex",
-      description: "Design & Development",
+      description: t("translation.projectDescription"),
       url: "https://pokedexhya.netlify.app/",
       technologies: [
         "/react.svg",
@@ -34,7 +36,7 @@ function Main() {
     },
     {
       name: "CrudUsers",
-      description: "Design & Development",
+      description: t("translation.projectDescription"),
       url: "https://crudyordan.netlify.app/",
       technologies: [
         "/react.svg",
@@ -47,7 +49,7 @@ function Main() {
     },
     {
       name: "RickAndMorty",
-      description: "Design & Development",
+      description: t("translation.projectDescription"),
       url: "https://rickaandmortyy.netlify.app/",
       technologies: [
         "/react.svg",
@@ -59,7 +61,7 @@ function Main() {
     },
     {
       name: "Weather",
-      description: "Design & Development",
+      description: t("translation.projectDescription"),
       url: "https://yordanluli.netlify.app/",
       technologies: ["/react.svg", "/html5.svg", "/css3.svg", "/javascript.svg"]
     }
@@ -106,9 +108,7 @@ function Main() {
             transition={{ duration: 0.5 }}
             whileInView={{ opacity: 1, y: 0 }}
           >
-            Hi! I'm Yordani. I'm passionate about development. In this digital
-            space I'm sharing my work and projects. It's a reflection of my
-            creativity, dedication and professional growth.
+            {t("translation.description")}
           </motion.h2>
         </div>
         <div className="main__container--description">
@@ -117,17 +117,20 @@ function Main() {
             transition={{ duration: 0.5, delay: 0.2 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Welcome to my digital space!
+            {t("translation.welcome")}
           </motion.h3>
         </div>
       </section>
       <section className="main__container--skills">
-        <h3 className="main__container--skills--title">Skills</h3>
+        <h3 className="main__container--skills--title">
+          {" "}
+          {t("translation.skills")}
+        </h3>
         <IconsGallery />
       </section>
       <section className="main__container--projects">
         <h3 className="main__container--projects--title" id="work">
-          Recent Projects
+          {t("translation.projects")}
         </h3>
         <ul>{renderProjects}</ul>
       </section>

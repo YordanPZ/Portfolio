@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react"
 import { obtenerHoraBuenosAires } from "../TimeCalculator"
 import { applyHoverEffect } from "../hoverEffects"
+import { useTranslation } from "react-i18next"
 
 function Footer() {
   const [horaBuenosAires, setHoraBuenosAires] = useState("")
@@ -9,6 +10,7 @@ function Footer() {
   const social1Ref = useRef(null)
   const social2Ref = useRef(null)
   const social3Ref = useRef(null)
+  const { t } = useTranslation()
 
   useEffect(() => {
     setHoraBuenosAires(obtenerHoraBuenosAires())
@@ -40,9 +42,9 @@ function Footer() {
         <div className="footer__logo">
           <h4 className="footer__logo--title">
             <div className="footer__logo--img--container">
-              <div className="footer__logo--img"></div>Let’s work
+              <div className="footer__logo--img"></div>{t("translation.together")}
             </div>{" "}
-            <span>together</span>
+            <span>{t("translation.together1")}</span>
           </h4>
         </div>
         <hr className="footer__line" />
@@ -65,11 +67,11 @@ function Footer() {
       </div>
       <div className="footer__container--info">
         <div className="footer__container--info--address">
-          <h5>Local Time</h5>
+          <h5> {t("translation.time")}</h5>
           <p>{horaBuenosAires} UTC-3</p>
         </div>
         <div className="footer__container--info--socials">
-          <h5>Socials</h5>
+          <h5> {t("translation.socials")}</h5>
           <div className="footer__container--info--socials--links">
             <a
               href="https://www.linkedin.com/in/yordan-jimenez/"

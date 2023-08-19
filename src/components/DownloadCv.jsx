@@ -1,4 +1,5 @@
 import React from "react"
+import { useTranslation } from "react-i18next"
 
 function DownloadCv() {
   const handleDownload = () => {
@@ -8,10 +9,10 @@ function DownloadCv() {
 
     enlaceDescarga.click()
   }
-
+  const { t } = useTranslation()
   return (
     <button onClick={handleDownload} className="button" type="button">
-      <span className="button__text">Download Cv</span>
+      <span className="button__text">{t("translation.download")}</span>
       <span className="button__icon">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -1,9 +1,28 @@
 {
-"translation": {
-    "welcome": "Bienvenido",
-    "about": "Acerca de",
-    "work": "Trabajo",
-    "contact": "Contacto"
-
-}
-}
+    "translation": {
+        "code": "© Code by Yordani",
+        "about": "Sobre mí",
+        "work": "Proyectos",
+        "contact": "Contacto",
+        "download":"Descargar Cv",
+        "location": "Ubicado en el corazón de la ciudad de Buenos Aires, Argentina",
+        "profession": "Desarrollador FrontEnd",
+        "menu": "menu",
+        "home": "Inicio",
+        "profession1": "Scrum Master",
+        "name": "Yordani Jimenez",
+        "separator": " - ",
+        "spanish":"Español",
+        "english": "Inglés",
+        "description": "Hola! Soy Yordani. Me apasiona el desarrollo. En este espacio digital comparto mi trabajo y mis  proyectos. Es una reflexión de mi creatividad, dedicación y crecimiento profesional.",
+        "welcome":  "Bienvenido a mi espacio digital!",
+        "skills": "HABILIDADES",
+        "projects": "PROYECTOS RECIENTES",
+        "projectDescription": "Diseño & Desarrollo",
+        "together": "Trabajemos",
+        "together1": "juntos!",
+        "time": "Hora Local",
+        "socials": "Redes",
+        "navigation": "NAVEGACIÓN"
+    }
+    }

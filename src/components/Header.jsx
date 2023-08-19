@@ -3,7 +3,8 @@ import { applyHoverEffect } from "../hoverEffects"
 import { FloatingMenu } from "./FloatingMenu"
 import { useInView, motion } from "framer-motion"
 import { AppContext } from "../App" // Importar el contexto
-// import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next"
+import i18n from "i18next"
 
 import BackgroundStars from "../BackgroundStars"
 import DownloadCv from "./DownloadCv"
@@ -13,10 +14,9 @@ function Header() {
   const aboutRef = useRef(null)
   const contactRef = useRef(null)
   const logoRef = useRef(null)
-  // const { t } = useTranslation()
+  const { t } = useTranslation()
 
   const { language } = useContext(AppContext)
-  const { setLanguage } = useContext(AppContext)
   console.log(language)
 
   const navRef = useRef(null)
@@ -70,6 +70,9 @@ function Header() {
     animate: { x: 0, opacity: 1 },
     transition: { duration: 0.7 }
   }
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language)
+  }
 
   const textNav = (
     <ul>
@@ -80,7 +83,7 @@ function Header() {
         animate={"animate"}
       >
         <a href="#about" className="active" ref={aboutRef}>
-          About
+          {t("translation.about")}
         </a>
       </motion.li>
       <motion.li
@@ -90,7 +93,7 @@ function Header() {
         animate={"animate"}
       >
         <a href="#work" className="active" ref={workRef}>
-          Work
+        {t("translation.work")}
         </a>
       </motion.li>
       <motion.li
@@ -100,7 +103,7 @@ function Header() {
         animate={"animate"}
       >
         <a href="#contact" className="active" ref={contactRef}>
-          Contact
+        {t("translation.contact")}
         </a>
       </motion.li>
       <motion.li
@@ -113,13 +116,12 @@ function Header() {
       </motion.li>
     </ul>
   )
-  const textNavMobile = <li onClick={() => setOpenMenu(!openMenu)}>Menu</li>
+  const textNavMobile = <li onClick={() => setOpenMenu(!openMenu)}>{t("translation.menu")}</li>
 
   return (
     <header className="header" id="home">
       {innerWidth >= 800 && <BackgroundStars />}
       <nav className="header nav-bar">
-        {/* <p>{t("translation.welcome")}</p> */}
         <div className="header nav-bar__logo">
           <motion.p
             ref={logoRef}
@@ -129,7 +131,7 @@ function Header() {
             animate={"animate"}
             style={{ zIndex: 1 }}
           >
-            © Code by Yordani
+            {t("translation.code")}
             <span></span>
           </motion.p>
           <div className="container">
@@ -138,21 +140,25 @@ function Header() {
                 type="radio"
                 id="radio-1"
                 name="tabs"
-                onChange={() => {
-                  setLanguage("Spanish")
-                }}
               />
-              <label className="tab" htmlFor="radio-1">
-                Spanish
+              <label
+                onClick={() => handleLanguageChange("es")}
+                className="tab"
+                htmlFor="radio-1"
+              >
+                {t("translation.spanish")}
               </label>
               <input
                 type="radio"
                 id="radio-2"
                 name="tabs"
-                onChange={() => setLanguage("English")}
               />
-              <label className="tab" htmlFor="radio-2">
-                English
+              <label
+                onClick={() => handleLanguageChange("en")}
+                className="tab"
+                htmlFor="radio-2"
+              >
+               {t("translation.english")}
               </label>
               <input type="radio" id="radio-3" name="tabs" />
               <span className="glider"></span>
@@ -175,7 +181,7 @@ function Header() {
         transition={("transition", { delay: 0.2 })}
         animate={"animate"}
       >
-        <p>Located in the heart of the city of Buenos Aires, Argentina</p>
+        <p>{t("translation.location")}</p>
         <img src="./worldwide.png" alt="worldwide" />
       </motion.div>
       <div className="header__img-container">
@@ -197,9 +203,9 @@ function Header() {
         <div>
           <i className="bx bx-arrow-back"></i>
         </div>
-        <p>Web Developer</p>
+        <p>{t("translation.profession")}</p>
         <hr className="hr" />
-        <p>Scrum Master</p>
+        <p>{t("translation.profession1")}</p>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -208,10 +214,10 @@ function Header() {
         className="header__name"
       >
         <h1>
-          Yordani Jimenez<span> - </span>
+        {t("translation.name")}<span>{t("translation.separator")}</span>
         </h1>
         <h1>
-          Yordani Jimenez<span> - </span>
+        {t("translation.name")}<span>{t("translation.separator")}</span>
         </h1>
       </motion.div>
     </header>

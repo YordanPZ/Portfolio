@@ -4,6 +4,25 @@
     "about": "About",
     "work": "Work",
     "contact": "Contact",
-    "download":"Download Cv"
+    "download":"Download Cv",
+    "location": "Located in the heart of the city of Buenos Aires, Argentina",
+    "profession": "FrontEnd Developer",
+    "menu": "menu",
+    "profession1": "Scrum Master",
+    "name": "Yordani Jimenez",
+    "separator": " - ",
+    "spanish":"Spanish",
+    "english": "English",
+    "description": "Hi! I'm Yordani. I'm passionate about development. In this digital space I'm sharing my work and projects. It's a reflection of my creativity, dedication and professional growth.",
+    "welcome":  "Welcome to my digital space!",
+    "home": "Home",
+    "skills": "SKILLS",
+    "projects": "RECENT PROJECTS",
+    "projectDescription": "Design & Development",
+    "together": "Let's work",
+    "together1": "together!",
+    "time": "Local Time",
+    "socials": "Socials",
+    "navigation": "NAVIGATION"
 }
 }

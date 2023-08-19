@@ -2,6 +2,8 @@ import { useRef, useEffect, useState } from "react"
 import { applyHoverEffect } from "../hoverEffects"
 import { motion, AnimatePresence } from "framer-motion"
 import DownloadCv from "./DownloadCv"
+import { useTranslation } from "react-i18next"
+
 export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
   const menuRef = useRef(null)
   const workRef = useRef(null)
@@ -45,6 +47,7 @@ export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
       }
     }
   }
+  const { t } = useTranslation()
 
   useEffect(() => {
     setShowMenu(openMenu)
@@ -88,7 +91,7 @@ export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
                 variants={menuVariants}
               >
                 <div className="floating-menu-content-inner">
-                  <h3 className="floating-menu-content-title">Navigation</h3>
+                  <h3 className="floating-menu-content-title">{t("translation.navigation")}</h3>
                   <hr className="floating-menu-content-hr" />
                   <ul className="floating-menu-content-list">
                     <li>
@@ -100,7 +103,7 @@ export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
                           }}
                           href="#home"
                         >
-                          Home
+                          {t("translation.home")}
                         </a>
                       </p>
                     </li>
@@ -113,7 +116,7 @@ export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
                           }}
                           href="#about"
                         >
-                          About
+                         {t("translation.about")}
                         </a>
                       </p>
                     </li>
@@ -127,7 +130,7 @@ export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
                           href="#work"
                           ref={workRef}
                         >
-                          Work
+                          {t("translation.work")}
                         </a>
                       </p>
                     </li>
@@ -140,7 +143,7 @@ export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
                           }}
                           href="#contact"
                         >
-                          Contact
+                          {t("translation.contact")}
                         </a>
                       </p>
                     </li>
@@ -150,7 +153,7 @@ export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
                   </ul>
                 </div>
                 <div className="floating-menu-content-inner">
-                  <h3 className="floating-menu-content-title">Socials</h3>
+                  <h3 className="floating-menu-content-title">{t("translation.socials")}</h3>
                   <hr className="floating-menu-content-hr" />
                   <ul className="floating-menu-content-list-footer">
                     <li>
