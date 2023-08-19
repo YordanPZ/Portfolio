@@ -1,8 +1,16 @@
 import React from "react"
 
 function DownloadCv() {
+  const handleDownload = () => {
+    const enlaceDescarga = document.createElement("a")
+    enlaceDescarga.href = "/cv/CvFrontEnd.pdf" // Ruta al archivo que deseas descargar
+    enlaceDescarga.download = "YordaniFrontEndcv.pdf" // Nombre con el que se descargará el archivo
+
+    enlaceDescarga.click()
+  }
+
   return (
-    <button className="button" type="button">
+    <button onClick={handleDownload} className="button" type="button">
       <span className="button__text">Download Cv</span>
       <span className="button__icon">
         <svg
