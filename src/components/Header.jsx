@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState, useContext } from "react"
+import { useEffect, useRef, useState } from "react"
 import { applyHoverEffect } from "../hoverEffects"
 import { FloatingMenu } from "./FloatingMenu"
 import { useInView, motion } from "framer-motion"
-import { AppContext } from "../App" // Importar el contexto
 import { useTranslation } from "react-i18next"
 import i18n from "i18next"
 
@@ -15,9 +14,6 @@ function Header() {
   const contactRef = useRef(null)
   const logoRef = useRef(null)
   const { t } = useTranslation()
-
-  const { language } = useContext(AppContext)
-  console.log(language)
 
   const navRef = useRef(null)
   const isInView = useInView(navRef)
@@ -93,7 +89,7 @@ function Header() {
         animate={"animate"}
       >
         <a href="#work" className="active" ref={workRef}>
-        {t("translation.work")}
+          {t("translation.work")}
         </a>
       </motion.li>
       <motion.li
@@ -103,7 +99,7 @@ function Header() {
         animate={"animate"}
       >
         <a href="#contact" className="active" ref={contactRef}>
-        {t("translation.contact")}
+          {t("translation.contact")}
         </a>
       </motion.li>
       <motion.li
@@ -116,7 +112,9 @@ function Header() {
       </motion.li>
     </ul>
   )
-  const textNavMobile = <li onClick={() => setOpenMenu(!openMenu)}>{t("translation.menu")}</li>
+  const textNavMobile = (
+    <li onClick={() => setOpenMenu(!openMenu)}>{t("translation.menu")}</li>
+  )
 
   return (
     <header className="header" id="home">
@@ -136,11 +134,7 @@ function Header() {
           </motion.p>
           <div className="container">
             <div className="tabs">
-              <input
-                type="radio"
-                id="radio-1"
-                name="tabs"
-              />
+              <input type="radio" id="radio-1" name="tabs" />
               <label
                 onClick={() => handleLanguageChange("es")}
                 className="tab"
@@ -148,17 +142,13 @@ function Header() {
               >
                 {t("translation.spanish")}
               </label>
-              <input
-                type="radio"
-                id="radio-2"
-                name="tabs"
-              />
+              <input type="radio" id="radio-2" name="tabs" />
               <label
                 onClick={() => handleLanguageChange("en")}
                 className="tab"
                 htmlFor="radio-2"
               >
-               {t("translation.english")}
+                {t("translation.english")}
               </label>
               <input type="radio" id="radio-3" name="tabs" />
               <span className="glider"></span>
@@ -214,10 +204,12 @@ function Header() {
         className="header__name"
       >
         <h1>
-        {t("translation.name")}<span>{t("translation.separator")}</span>
+          {t("translation.name")}
+          <span>{t("translation.separator")}</span>
         </h1>
         <h1>
-        {t("translation.name")}<span>{t("translation.separator")}</span>
+          {t("translation.name")}
+          <span>{t("translation.separator")}</span>
         </h1>
       </motion.div>
     </header>

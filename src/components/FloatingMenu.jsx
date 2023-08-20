@@ -34,7 +34,7 @@ export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
       opacity: 0
     },
     visible: {
-      clipPath: "circle(122.3% at 90% 18%)",
+      clipPath: "circle(140.3% at 90% 18%)",
       opacity: 1,
       transition: {
         duration: 0.5
@@ -91,7 +91,9 @@ export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
                 variants={menuVariants}
               >
                 <div className="floating-menu-content-inner">
-                  <h3 className="floating-menu-content-title">{t("translation.navigation")}</h3>
+                  <h3 className="floating-menu-content-title">
+                    {t("translation.navigation")}
+                  </h3>
                   <hr className="floating-menu-content-hr" />
                   <ul className="floating-menu-content-list">
                     <li>
@@ -116,7 +118,7 @@ export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
                           }}
                           href="#about"
                         >
-                         {t("translation.about")}
+                          {t("translation.about")}
                         </a>
                       </p>
                     </li>
@@ -153,7 +155,9 @@ export const FloatingMenu = ({ isInView, openMenu, setOpenMenu }) => {
                   </ul>
                 </div>
                 <div className="floating-menu-content-inner">
-                  <h3 className="floating-menu-content-title">{t("translation.socials")}</h3>
+                  <h3 className="floating-menu-content-title">
+                    {t("translation.socials")}
+                  </h3>
                   <hr className="floating-menu-content-hr" />
                   <ul className="floating-menu-content-list-footer">
                     <li>
