@@ -3,6 +3,7 @@ import { obtenerHoraBuenosAires } from "../TimeCalculator"
 import { applyHoverEffect } from "../hoverEffects"
 import { useTranslation } from "react-i18next"
 import { useForm, ValidationError } from "@formspree/react"
+import { Toaster, toast } from "sonner"
 
 function Footer() {
   const [horaBuenosAires, setHoraBuenosAires] = useState("")
@@ -13,7 +14,6 @@ function Footer() {
   const social3Ref = useRef(null)
   const submitRef = useRef(null)
   const { t } = useTranslation()
-  const [messageShown, setMessageShown] = useState(false)
 
   const [inputs, setInputs] = useState({
     name: "",
@@ -38,13 +38,18 @@ function Footer() {
   }
 
   const [state, handleSubmit] = useForm("xpzgdwnn")
-  useEffect(() => {
-    if (state.succeeded && !messageShown) {
-      setMessageShown(true)
-      alert("Correo Enviado!")
-      resetForm()
-    }
-  }, [state.succeeded, messageShown])
+  const onSubmitSuccess = () => {
+    toast.success("Email enviado!")
+    resetForm()
+  }
+  const sendEmail = () => {
+    handleSubmit(inputs)
+    onSubmitSuccess()
+  }
+  const handleSubmitForm = (e) => {
+    e.preventDefault()
+    sendEmail()
+  }
   useEffect(() => {
     setHoraBuenosAires(obtenerHoraBuenosAires())
   }, [])
@@ -72,6 +77,7 @@ function Footer() {
 
   return (
     <footer className="footer" id="contact">
+      <Toaster richColors />
       <div className="footer__container">
         <div className="footer__logo">
           <h4 className="footer__logo--title">
@@ -101,13 +107,13 @@ function Footer() {
         </div>
       </div>
       <div>
-        <form onSubmit={handleSubmit} className="footer__form" action="">
+        <form onSubmit={handleSubmitForm} className="footer__form" action="">
           <div className="form__list">
-            <h3 className="form__list--title">Tienes un proyecto en mente?</h3>
+            <h3 className="form__list--title">{t("translation.formtitle")}</h3>
             <div className="form__list--item">
               <h5>01</h5>
               <label className="label" htmlFor="name">
-                Cual es tu nombre?
+                {t("translation.formname")}
               </label>
               <input
                 className="footer__input"
@@ -129,7 +135,7 @@ function Footer() {
             </div>
             <div className="form__list--item">
               <h5>02</h5>
-              <label htmlFor="email">Cual es tu Email?</label>
+              <label htmlFor="email">{t("translation.formemail")}</label>
               <input
                 className="footer__input"
                 placeholder="john@doe.com *"
@@ -151,7 +157,7 @@ function Footer() {
             <div className="form__list--item">
               <h5>03</h5>
               <label htmlFor="organization">
-                Cual es el nombre de tu empresa?
+                {t("translation.formcompany")}
               </label>
               <input
                 className="footer__input"
@@ -166,7 +172,7 @@ function Footer() {
 
             <div className="form__list--item2">
               <h5>04</h5>
-              <label htmlFor="menssage">Tu mensaje</label>
+              <label htmlFor="menssage">{t("translation.formmessage")}</label>
               <textarea
                 className="footer__textarea"
                 required
@@ -176,7 +182,7 @@ function Footer() {
                 onChange={handleInputChange}
                 cols="30"
                 rows="10"
-                placeholder="Hola Yordan, podrias ayudarme con ...*"
+                placeholder={t("translation.formmessageph")}
               ></textarea>
               <ValidationError
                 className="error"
@@ -192,7 +198,7 @@ function Footer() {
                 ref={submitRef}
                 className="btn-submit"
               >
-                Enviar!
+                {t("translation.send")}
               </button>
             </div>
           </div>

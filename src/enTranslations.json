@@ -23,6 +23,13 @@
     "together1": "together!",
     "time": "Local Time",
     "socials": "Socials",
-    "navigation": "NAVIGATION"
+    "navigation": "NAVIGATION",
+    "formtitle": "Got a project in mind?",
+    "formname": "What's your name?",
+    "formemail": "What's your email?",
+    "formcompany": "What's the name of your organization?",
+    "formmessage": "Your message",
+    "formmessageph": "Hi Yordani, can you help me with...*",
+    "send": "Send!"
 }
 }

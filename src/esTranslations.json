@@ -7,7 +7,7 @@
         "download":"Descargar Cv",
         "location": "Ubicado en el corazón de la ciudad de Buenos Aires, Argentina",
         "profession": "FrontEnd Dev.",
-        "menu": "menu",
+        "menu": "menú",
         "home": "Inicio",
         "profession1": "Scrum Master",
         "name": "Yordani Jimenez",
@@ -23,6 +23,13 @@
         "together1": "juntos!",
         "time": "Hora Local",
         "socials": "Redes",
-        "navigation": "NAVEGACIÓN"
+        "navigation": "NAVEGACIÓN",
+        "formtitle": "Tienes un proyecto en mente?",
+        "formname": "Cuál es tu nombre?",
+        "formemail": "Cuál es tu email?",
+        "formcompany": "Cuál es el nombre de tu empresa?",
+        "formmessage": "Tu mensaje",
+        "formmessageph": "Hola Yordani, podrías ayudarme con...*",
+        "send": "Enviar!"
     }
     }

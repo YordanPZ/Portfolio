@@ -713,7 +713,7 @@ a{
   font-size: calc(clamp(3.25em, 7vw, 8em) * .375);
   margin: 2rem 0;
 }
-.form__list--item label {
+.form__list--item label,.form__list--item2 label {
   font-size: calc(clamp(3.25em, 7vw, 8em) * .23);
   opacity: 1;
   transition: opacity 0.3s ease;
