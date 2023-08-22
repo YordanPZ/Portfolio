@@ -30,6 +30,7 @@
     "formcompany": "What's the name of your organization?",
     "formmessage": "Your message",
     "formmessageph": "Hi Yordani, can you help me with...*",
-    "send": "Send!"
+    "send": "Send!",
+    "emailsent": "Email sent!"
 }
 }

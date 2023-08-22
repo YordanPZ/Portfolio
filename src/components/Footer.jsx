@@ -39,7 +39,7 @@ function Footer() {
 
   const [state, handleSubmit] = useForm("xpzgdwnn")
   const onSubmitSuccess = () => {
-    toast.success("Email enviado!")
+    toast.success(t("translation.emailsent"))
     resetForm()
   }
   const sendEmail = () => {
