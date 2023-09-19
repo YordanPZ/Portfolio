@@ -14,7 +14,13 @@ export const IconsGallery = () => {
     "/tailwindcss.svg",
     "/redux.svg",
     "/bootstrap.svg",
-    "/materialui.svg"
+    "/materialui.svg",
+    "/handlebars.svg",
+    "/jest.svg",
+    "/postgresql.svg",
+    "/sequelize.svg",
+    "/nodejs.svg",
+    "/express.svg"
   ]
   const renderIcons = Icons.map((icon) => {
     return (

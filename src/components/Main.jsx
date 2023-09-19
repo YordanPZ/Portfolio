@@ -11,7 +11,7 @@ function Main() {
   const proyects = [
     {
       name: "Ecommerce",
-      description: t("translation.projectDescription"),
+      description: t("translation.project1Description"),
       url: "https://ecomerceahy.netlify.app/",
       technologies: [
         "/react.svg",
@@ -23,7 +23,7 @@ function Main() {
     },
     {
       name: "Pokedex",
-      description: t("translation.projectDescription"),
+      description: t("translation.project2Description"),
       url: "https://pokedexhya.netlify.app/",
       technologies: [
         "/react.svg",
@@ -36,7 +36,7 @@ function Main() {
     },
     {
       name: "CrudUsers",
-      description: t("translation.projectDescription"),
+      description: t("translation.project3Description"),
       url: "https://crudyordan.netlify.app/",
       technologies: [
         "/react.svg",
@@ -49,7 +49,7 @@ function Main() {
     },
     {
       name: "RickAndMorty",
-      description: t("translation.projectDescription"),
+      description: t("translation.project4Description"),
       url: "https://rickaandmortyy.netlify.app/",
       technologies: [
         "/react.svg",
@@ -61,7 +61,7 @@ function Main() {
     },
     {
       name: "Weather",
-      description: t("translation.projectDescription"),
+      description: t("translation.project5Description"),
       url: "https://yordanluli.netlify.app/",
       technologies: ["/react.svg", "/html5.svg", "/css3.svg", "/javascript.svg"]
     }

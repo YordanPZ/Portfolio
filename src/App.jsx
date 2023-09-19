@@ -24,6 +24,7 @@ i18n.use(initReactI18next).init({
 })
 
 function App() {
+  // eslint-disable-next-line no-unused-vars
   const [state, handleSubmit] = useForm("xpzgdwnn")
   const [openMenu, setOpenMenu] = useState(false)
   const [language, setLanguage] = useState("spanish")

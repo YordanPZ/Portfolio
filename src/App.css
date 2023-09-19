@@ -433,12 +433,15 @@ a{
   width: 100%;
   padding: 3rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   place-content: center;
   place-items: center;
   overflow: hidden;
   border-radius: 30px;
   box-shadow: 0px 0px 20px var(--color-gray);
   margin: 1rem 0 4rem 0;
+  justify-content: space-around;
 }
 .skill {
   width: 120px;
@@ -853,6 +856,7 @@ a{
   }
   .skill__container {
     margin: 1rem 0 4rem 0;
+
   }
   .main{
     padding: 0 6rem;
