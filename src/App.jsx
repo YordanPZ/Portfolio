@@ -38,6 +38,7 @@ function App() {
     // Despertar backens en suspencion
     axios.get("https://peliculasprueba.onrender.com/actors")
     axios.get("https://loginapp-g0zp.onrender.com/users")
+    axios.get("https://user-crud-bd.onrender.com/api/v1/users")
   }, [])
 
   return (
