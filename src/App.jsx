@@ -2,6 +2,7 @@ import React, { useState, createContext, useEffect } from "react"
 import Header from "./components/Header"
 import Main from "./components/Main"
 import Footer from "./components/Footer"
+import axios from "axios"
 import "./App.css"
 import i18n from "i18next"
 import { initReactI18next } from "react-i18next"
@@ -34,6 +35,9 @@ function App() {
       // usar handleSubmit aquí
       message: "Alguien está viendo tu portfolio!"
     })
+    // Despertar backens en suspencion
+    axios.get("https://peliculasprueba.onrender.com/actors")
+    axios.get("https://loginapp-g0zp.onrender.com/users")
   }, [])
 
   return (
