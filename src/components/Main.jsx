@@ -10,6 +10,32 @@ function Main() {
   const isInView = useInView(whatsappRef)
   const proyects = [
     {
+      name: "LoginApp",
+      description: "FrontEnd & BackEnd",
+      url: "https://verifyapp.netlify.app/auth/login",
+      technologies: [
+        "/nodejs.svg",
+        "/express.svg",
+        "/sequelize.svg",
+        "/postgresql.svg",
+        "/react.svg",
+        "/bootstrap.svg"
+      ]
+    },
+    {
+      name: "MovieApp",
+      description: "FrontEnd & BackEnd",
+      url: "https://moviesappyordan.netlify.app",
+      technologies: [
+        "/nodejs.svg",
+        "/express.svg",
+        "/sequelize.svg",
+        "/postgresql.svg",
+        "/react.svg",
+        "/bootstrap.svg"
+      ]
+    },
+    {
       name: "Ecommerce",
       description: t("translation.project1Description"),
       url: "https://ecomerceahy.netlify.app/",
