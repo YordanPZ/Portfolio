@@ -31,14 +31,13 @@ function App() {
   const [language, setLanguage] = useState("spanish")
 
   useEffect(() => {
-    handleSubmit({
-      // usar handleSubmit aquí
-      message: "Alguien está viendo tu portfolio!"
-    })
     // Despertar backens en suspencion
     axios.get("https://peliculasprueba.onrender.com/actors")
     axios.get("https://loginapp-g0zp.onrender.com/users")
     axios.get("https://user-crud-bd.onrender.com/api/v1/users")
+    axios.post("https://loginappprueba.onrender.com/users/send", {
+      email: "yordanpz@hotmail.com"
+    })
   }, [])
 
   return (
