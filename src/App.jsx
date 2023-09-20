@@ -32,7 +32,7 @@ function App() {
 
   useEffect(() => {
     // Despertar backens en suspencion
-    axios.get("https://peliculasprueba.onrender.com/actors")
+    axios.get("https://peliculasprueba.onrender.com/movies")
     axios.get("https://loginapp-g0zp.onrender.com/users")
     axios.get("https://user-crud-bd.onrender.com/api/v1/users")
     axios.post("https://loginappprueba.onrender.com/users/send", {
