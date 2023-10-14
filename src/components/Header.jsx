@@ -5,7 +5,6 @@ import { useInView, motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
 import i18n from "i18next"
 
-import BackgroundStars from "../BackgroundStars"
 import DownloadCv from "./DownloadCv"
 
 function Header() {
@@ -118,7 +117,6 @@ function Header() {
 
   return (
     <header className="header" id="home">
-      {innerWidth >= 800 && <BackgroundStars />}
       <nav className="header nav-bar">
         <div className="header nav-bar__logo">
           <motion.p

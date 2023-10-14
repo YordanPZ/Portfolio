@@ -10,7 +10,6 @@ import { initReactI18next } from "react-i18next"
 import enTranslations from "./enTranslations.json" // Archivo con las traducciones en inglés
 import esTranslations from "./esTranslations.json" // Archivo con las traducciones en
 
-import { useForm } from "@formspree/react"
 export const AppContext = createContext()
 
 i18n.use(initReactI18next).init({
@@ -26,7 +25,6 @@ i18n.use(initReactI18next).init({
 
 function App() {
   // eslint-disable-next-line no-unused-vars
-  const [state, handleSubmit] = useForm("xpzgdwnn")
   const [openMenu, setOpenMenu] = useState(false)
   const [language, setLanguage] = useState("spanish")
 
@@ -38,6 +36,7 @@ function App() {
     axios.post("https://loginappprueba.onrender.com/users/send", {
       email: "yordanpz@hotmail.com"
     })
+    axios.get("https://ecommerceapi-vscj.onrender.com/products")
   }, [])
 
   return (
