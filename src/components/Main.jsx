@@ -10,105 +10,119 @@ function Main() {
   const isInView = useInView(whatsappRef)
   const proyects = [
     {
-      name: "LoginWeb",
-      description: "FrontEnd & BackEnd",
-      url: "https://verifyapp.netlify.app/auth/login",
-      technologies: [
-        "/nodejs.svg",
-        "/express.svg",
-        "/sequelize.svg",
-        "/postgresql.svg",
-        "/react.svg",
-        "/bootstrap.svg"
+      name: "MediConnect",
+      description: t("translation.project8Description"),
+      url:"https://frontend-no-country-actual.onrender.com/",
+      technologies:[
+        "/logos/nestjs.svg",
+        "/logos/docker.svg",
+        "/logos/nextjs.svg",
+        "/logos/mysql.svg",
+        "/logos/typescript.svg",
+        "logos/redux.svg"
       ],
-      extract:
-        "LoginApp es una aplicación web full-stack que permite a los usuarios registrarse e iniciar sesión. El frontend está desarrollado con React y Bootstrap para una interfaz intuitiva y responsive. El backend utiliza Node.js, Express y Sequelize para conectarse a una base de datos PostgreSQL. Al registrarse, los usuarios reciben un email de confirmación para verificar su cuenta. Luego pueden iniciar sesión y restablecer su contraseña a través de un email de recuperación. Este proyecto demuestra mis habilidades en desarrollo full-stack, manejo de autenticación y autorización de usuarios, envío de emails transaccionales, y uso de tecnologías populares como React, Node.js y PostgreSQL para construir aplicaciones web seguras y escalables."
-    },
-    {
-      name: "MovieApp",
-      description: "FrontEnd & BackEnd",
-      url: "https://moviesappyordan.netlify.app",
-      technologies: [
-        "/nodejs.svg",
-        "/express.svg",
-        "/sequelize.svg",
-        "/postgresql.svg",
-        "/react.svg",
-        "/bootstrap.svg"
-      ],
-      extract:
-        "MovieApp es una aplicación web full-stack que permite administrar una base de datos de películas. El frontend hecho con React y Bootstrap ofrece una interfaz para agregar, modificar y eliminar películas, directores, actores e imágenes. El backend desarrollado con Node.js, Express y Sequelize se conecta a una base de datos PostgreSQL para almacenar los datos. Este proyecto demuestra mis habilidades para construir un sistema completo de administración de contenidos, desde el frontend hasta la base de datos, utilizando tecnologías como React, Node.js y PostgreSQL. Las capacidades que exhibe incluyen CRUD de datos, ruteo y navegación en el frontend, conexión a bases de datos relacionales en el backend, y despliegue de la aplicación full-stack."
-    },
-    {
-      name: "Ecommerce",
-      description: t("translation.project1Description"),
-      url: "https://ecomerceahy.netlify.app/",
-      technologies: [
-        "/react.svg",
-        "/redux.svg",
-        "/html5.svg",
-        "/css3.svg",
-        "/javascript.svg"
-      ],
-      extract:
-        "Ecommerce es una aplicación web full-stack de comercio electrónico. El frontend está desarrollado con React y Redux. Los usuarios pueden registrarse, autenticarse, navegar el catálogo de productos, agregar al carrito y completar una compra. El backend utiliza Node.js, Express y Sequelize para la lógica del servidor e integrar una base de datos PostgreSQL donde se almacenan los productos, órdenes, usuarios, etc. El proyecto demuestra mis habilidades para construir aplicaciones web full-stack seguras y escalables, con un frontend moderno y atractivo con React, y un backend robusto con Node.js y PostgreSQL. Las capacidades exhibidas incluyen autenticación y autorización, lógica de negocios, y CRUD de datos con una base de datos relacional."
-    },
-    {
-      name: "Pokedex",
-      description: t("translation.project2Description"),
-      url: "https://pokedexhya.netlify.app/",
-      technologies: [
-        "/react.svg",
-        "/redux.svg",
-        "/html5.svg",
-        "/css3.svg",
-        "/javascript.svg",
-        "/materialui.svg"
-      ],
-      extract:
-        "Pokedex es una aplicación web desarrollada con React, Redux y Material UI que consume la API de PokeAPI para mostrar datos de diferentes Pokémon. Los usuarios pueden ver una lista completa de Pokémon o buscar por nombre para encontrar información específica como estadísticas, movimientos, tipos y debilidades. Implementé paginación y filtros para mejorar la experiencia de usuario. Los detalles de cada Pokémon se muestran en una tarjeta con un diseño limpio y moderno gracias a Material UI. Este proyecto demuestra mis habilidades consumiendo y trabajando con APIs externas en el frontend, además de crear interfaces atractivas y dinámicas con React y Redux."
-    },
-    {
-      name: "CrudUsers",
-      description: t("translation.project3Description"),
-      url: "https://crudyordan.netlify.app/",
-      technologies: [
-        "/react.svg",
-        "/typescript.svg",
-        "/html5.svg",
-        "/css3.svg",
-        "/javascript.svg",
-        "/tailwindcss.svg"
-      ],
-      extract:
-        "CrudUsers es una aplicación web desarrollada con React, TypeScript y Tailwind CSS que permite administrar usuarios con operaciones CRUD (crear, leer, actualizar, eliminar). La interfaz permite ver una lista de usuarios, agregar nuevos, editar la información y eliminar. Los datos se almacenan temporalmente en el estado de React con hooks y TypeScript aporta tipado estático. El proyecto demuestra mis habilidades en el desarrollo de aplicaciones web con React y TypeScript, creando interfaces responsive con Tailwind CSS. Las capacidades mostradas incluyen operaciones CRUD, manejo de estado con hooks, validaciones en los formularios, y uso de tipado estático para mejorar el maintainability."
-    },
-    {
-      name: "RickAndMorty",
-      description: t("translation.project4Description"),
-      url: "https://rickaandmortyy.netlify.app/",
-      technologies: [
-        "/react.svg",
-        "/html5.svg",
-        "/css3.svg",
-        "/javascript.svg",
-        "/tailwindcss.svg"
-      ],
-      extract:
-        "RickAndMorty es una aplicación web desarrollada con React y TailwindCSS que consume la API de Rick and Morty para mostrar información de los personajes. Los usuarios pueden explorar los distintos personajes, ver detalles como su especie, origen y episodios en los que aparecen. También se muestran capturas de los personajes. La interfaz está diseñada responsivamente con TailwindCSS. La información se obtiene dinámicamente desde la API con fetches y se renderiza con componentes reutilizables. Este proyecto demuestra mis habilidades consumiendo APIs externas, creando interfaces dinámicas con React, y construyendo un diseño moderno y adaptable con TailwindCSS."
+      extract:t("translation.extract8")
     },
     {
       name: "Weather",
       description: t("translation.project5Description"),
       url: "https://yordanluli.netlify.app/",
       technologies: [
-        "/react.svg",
-        "/html5.svg",
-        "/css3.svg",
-        "/javascript.svg"
+        "/logos/react.svg",
+        "/logos/html5.svg",
+        "/logos/css3.svg",
+        "/logos/javascript.svg"
       ],
       extract:
-        "Weather es una aplicación web desarrollada con React que consume la API de OpenWeatherMap para obtener datos meteorológicos. Los usuarios pueden buscar por ciudad y ver el clima actual, el pronóstico para el día y la semana con detalles como temperatura, humedad y velocidad del viento. La interfaz muestra iconos representativos del estado del tiempo y gráficos limpios con la información. Los datos se actualizan dinámicamente al cambiar de ubicación. El proyecto demuestra mis habilidades para consumir APIs de terceros, mostrar los datos de forma clara en la interfaz, y actualizar la UI en función de la interacción del usuario en una aplicación web moderna creada con React."
+      t("translation.extract5")
+    },
+    {
+      name: "LoginWeb",
+      description:t("translation.project6Description"),
+      url: "https://verifyapp.netlify.app/auth/login",
+      technologies: [
+        "/logos/nodejs.svg",
+        "/logos/express.svg",
+        "/logos/sequelize.svg",
+        "/logos/postgresql.svg",
+        "/logos/react.svg",
+        "/logos/bootstrap.svg"
+      ],
+      extract:
+      t("translation.extract6")
+    },
+    {
+      name: "MovieApp",
+      description:t("translation.project7Description"),
+      url: "https://moviesappyordan.netlify.app",
+      technologies: [
+        "/logos/nodejs.svg",
+        "/logos/express.svg",
+        "/logos/sequelize.svg",
+        "/logos/postgresql.svg",
+        "/logos/react.svg",
+        "/logos/bootstrap.svg"
+      ],
+      extract:
+      t("translation.extract7")
+    },
+    {
+      name: "Ecommerce",
+      description: t("translation.project1Description"),
+      url: "https://ecomerceahy.netlify.app/",
+      technologies: [
+        "/logos/react.svg",
+        "/logos/redux.svg",
+        "/logos/html5.svg",
+        "/logos/css3.svg",
+        "/logos/javascript.svg"
+      ],
+      extract:
+      t("translation.extract1")
+    },
+    {
+      name: "Pokedex",
+      description: t("translation.project2Description"),
+      url: "https://pokedexhya.netlify.app/",
+      technologies: [
+        "/logos/react.svg",
+        "/logos/redux.svg",
+        "/logos/html5.svg",
+        "/logos/css3.svg",
+        "/logos/javascript.svg",
+        "/logos/materialui.svg"
+      ],
+      extract:
+      t("translation.extract2")
+    },
+    {
+      name: "CrudUsers",
+      description: t("translation.project3Description"),
+      url: "https://crudyordan.netlify.app/",
+      technologies: [
+        "/logos/react.svg",
+        "/logos/typescript.svg",
+        "/logos/html5.svg",
+        "/logos/css3.svg",
+        "/logos/javascript.svg",
+        "/logos/tailwindcss.svg"
+      ],
+      extract:
+      t("translation.extract3")
+    },
+    {
+      name: "RickAndMorty",
+      description: t("translation.project4Description"),
+      url: "https://rickaandmortyy.netlify.app/",
+      technologies: [
+        "/logos/react.svg",
+        "/logos/html5.svg",
+        "/logos/css3.svg",
+        "/logos/javascript.svg",
+        "/logos/tailwindcss.svg"
+      ],
+      extract:
+      t("translation.extract4")
     }
   ]
   const [openProjects, setOpenProjects] = useState([])
@@ -130,7 +144,7 @@ function Main() {
           <div>
             <span>{project.description}</span>
             <div className="project-technologies">
-              {project.technologies.map((technology, index) => {
+              {project.technologies?.map((technology) => {
                 return (
                   <>
                     <img

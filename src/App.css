@@ -280,25 +280,28 @@ a{
   transition: 1s ease all;
 }
 .Weather::before{
-  background-image: url(/weather.png)
+  background-image: url(/thumbnails/weather.png)
 }
 .RickAndMorty::before{
-  background-image: url(/rick.png)
+  background-image: url(/thumbnails/rick.png)
 }
 .CrudUsers::before{
-  background-image: url(/crud.png)
+  background-image: url(/thumbnails/crud.png)
 }
 .Pokedex::before{
-  background-image: url(/Pokedex.png)
+  background-image: url(/thumbnails/Pokedex.png)
 }
 .Ecommerce::before{
-  background-image: url(/Ecommerce.png)
+  background-image: url(/thumbnails/Ecommerce.png)
 }
 .MovieApp::before{
-  background-image: url(/MovieApp.png)
+  background-image: url(/thumbnails/MovieApp.png)
 }
 .LoginWeb::before{
-  background-image: url(/AuthenticationApp.png)
+  background-image: url(/thumbnails/AuthenticationApp.png)
+}
+.MediConnect::before{
+  background-image: url(/thumbnails/MediConnect.png)
 }
 .project-link:hover::before {
   opacity: 0.2;
@@ -348,7 +351,7 @@ a{
   display: inline-block;
   height: 150px;
   width: 150px;
-  background-image: url(/yordan1.png);
+  background-image: url(/thumbnails/yordan1.png);
   background-size: 140%;
   background-position: -30px -30px;
   background-color: #FFF;
