@@ -1,8 +1,8 @@
-import { IconsGallery } from "./IconsGallery"
 import { motion, useInView } from "framer-motion"
-import ContactWpp from "./ContactWpp"
 import { useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
+import ContactWpp from "./ContactWpp"
+import { IconsGallery } from "./IconsGallery"
 
 function Main() {
   const whatsappRef = useRef(null)
@@ -12,8 +12,8 @@ function Main() {
     {
       name: "MediConnect",
       description: t("translation.project8Description"),
-      url:"https://frontend-no-country-actual.onrender.com/",
-      technologies:[
+      url: "https://frontend-no-country-actual.onrender.com/",
+      technologies: [
         "/logos/nestjs.svg",
         "/logos/docker.svg",
         "/logos/nextjs.svg",
@@ -21,7 +21,7 @@ function Main() {
         "/logos/typescript.svg",
         "logos/redux.svg"
       ],
-      extract:t("translation.extract8")
+      extract: t("translation.extract8")
     },
     {
       name: "Weather",
@@ -38,7 +38,7 @@ function Main() {
     },
     {
       name: "LoginWeb",
-      description:t("translation.project6Description"),
+      description: t("translation.project6Description"),
       url: "https://verifyapp.netlify.app/auth/login",
       technologies: [
         "/logos/nodejs.svg",
@@ -46,14 +46,15 @@ function Main() {
         "/logos/sequelize.svg",
         "/logos/postgresql.svg",
         "/logos/react.svg",
-        "/logos/bootstrap.svg"
+        "/logos/bootstrap.svg",
+        "/logos/firebase.svg"
       ],
       extract:
       t("translation.extract6")
     },
     {
       name: "MovieApp",
-      description:t("translation.project7Description"),
+      description: t("translation.project7Description"),
       url: "https://moviesappyordan.netlify.app",
       technologies: [
         "/logos/nodejs.svg",
@@ -61,7 +62,8 @@ function Main() {
         "/logos/sequelize.svg",
         "/logos/postgresql.svg",
         "/logos/react.svg",
-        "/logos/bootstrap.svg"
+        "/logos/bootstrap.svg",
+        "/logos/firebase.svg"
       ],
       extract:
       t("translation.extract7")

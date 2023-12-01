@@ -28,6 +28,7 @@ export const IconsGallery = () => {
     "/logos/nextjs.svg",
     "/logos/mysql.svg",
     "/logos/nestjs.svg",
+    "/logos/firebase.svg"
   ]
   const renderIcons = Icons.map((icon) => {
     return (
